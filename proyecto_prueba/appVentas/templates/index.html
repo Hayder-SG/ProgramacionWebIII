@@ -51,16 +51,19 @@
     </style>
 </head>
 <body>
-
+    <div><p></p><p></p></div>
+    
     <div class="hero">
-        <h1>Bienvenido al Sistema de Ventas</h1>
+        <h1>Bienvenido al Sistema de Ventas</h1><a class="login" href="{% url 'login' %}">Iniciar Sesión</a>
+        <a class="login" href="{% url 'logout' %}">Cerrar Sesión</a>
         <p>Gestiona tus Clientes, Compras y Tiendas de manera sencilla y rápida.</p>
 
         <a href="{% url 'lista_clientes' %}">Clientes</a>
         <a href="{% url 'listar_compras' %}">Compras</a>
         <a href="{% url 'listar_tiendas' %}">Tiendas</a>
+        
     </div>
-
+    <h2>usuario: {{ user.username }}</h2></p>
     {% block content %}
 
     <h1>BIENVENIDO A PRESENTACION</h1>
