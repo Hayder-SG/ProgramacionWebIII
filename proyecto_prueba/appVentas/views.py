@@ -1,6 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Cliente, Tienda, Compra
 from .forms import ClienteForm, CompraForm, TiendaForm
+from django.shortcuts import render
+
+def index(request):
+    return render(request, 'index.html')
 
 # Create your views here.
 def lista_clientes(request):
@@ -125,4 +129,5 @@ def eliminar_compra(request, id):
     return redirect('listar_compras')
 
 
-
+def presentacion(request):
+    return render(request, 'presentacion.html')

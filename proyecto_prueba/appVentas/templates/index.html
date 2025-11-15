@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido - Proyecto Ventas</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, #cceeff, #99ddff);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            display: inline-block;
+            background-color: #66ccff;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            margin: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .hero a:hover {
+            background-color: #3399ff;
+        }
+        .imagen{
+        display: flex;
+        
+        
+        height: 700px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Bienvenido al Sistema de Ventas</h1>
+        <p>Gestiona tus Clientes, Compras y Tiendas de manera sencilla y rápida.</p>
+
+        <a href="{% url 'lista_clientes' %}">Clientes</a>
+        <a href="{% url 'listar_compras' %}">Compras</a>
+        <a href="{% url 'listar_tiendas' %}">Tiendas</a>
+    </div>
+
+    {% block content %}
+
+    <h1>BIENVENIDO A PRESENTACION</h1>
+    <div><h2>Bienvenido a la seccion de presentacion de mi base Ventas</h2></div>
+    <div class="imagen">
+
+    
+    <img src="https://www.shutterstock.com/shutterstock/photos/2654235771/display_1500/stock-vector-a-cute-kawaii-calico-cat-sitting-and-looking-up-with-a-happy-hopeful-expression-adorable-cartoon-2654235771.jpg" alt="">
+    </div>
+    
+    {% endblock %}
+
+</body>
+</html>

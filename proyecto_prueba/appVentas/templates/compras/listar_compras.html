@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "index.html" %}
 
 {% block content %}
     <h1>LISTADO DE COMPRAS</h1>
@@ -7,8 +7,8 @@
             <th>Id</th>
             <th>Fecha</th>
             <th>Monto</th>
-            <th>Id Cliente</th>
-            <th>Id Tienda</th>
+            <th>Id Cliente- Cliente</th>
+            <th>Id Tienda- Tienda</th>
             <th>Acciones</th>
         </tr>
         {% for compra in compras %}

@@ -5,6 +5,9 @@ class Cliente(models.Model):
     id_cliente = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
+    
+    def __str__(self):
+        return f"{self.id_cliente} - {self.nombre}"
 
     class Meta:
         managed = False
@@ -18,6 +21,9 @@ class Tienda(models.Model):
     class Meta:
         managed = False
         db_table = 'tiendas'
+        
+    def __str__(self):
+        return f"{self.id_tienda} - {self.nombre}"
 
 class Compra(models.Model):
     id_compra = models.AutoField(primary_key=True)
